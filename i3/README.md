@@ -1,5 +1,7 @@
 # Food Nutrition–Cost Analysis Pipeline
 
+by Pete Namchaisiri for IMT542 (Sp 2026)
+
 This project integrates USDA Foundation Foods nutrition data with USDA Food-at-Home (F-MAP) price data to compute cost-efficiency metrics such as **calories per dollar**, **protein per dollar**, and **average price per 100g** for thousands of foods.
 
 The notebook loads, cleans, maps, and analyzes both datasets using a lightweight fuzzy‑matching system (no external libraries required).
