@@ -1,0 +1,31 @@
+{
+    "name": "Pete Namchaisiri",
+    "course_code": "IMT 542",
+    "course_name": "Portable Information Structures",
+    "assignment": "G3 Ideate based on similar project ideas, refinement, present, feedback",
+    "submission": {
+        "project_ideas":[
+            {
+                "idea_rank": 1,
+                "idea_name": "Online Food Nutrition vs Cost Database",
+                "idea_summary": "A comprehensive database that provides nutritional informationv from official sources and cost comparisons for various food products. Users can search for specific items or compare similar products to make informed decisions about their purchases.",
+                "information_story": "The databse aggregates data from various sources (USDA, Open Food Facts e.g.) to provide a centralized repository of food information. Users can search for specific products or browse categories to find detailed nutritional and cost data.",
+                "possible_information_structures": ["Database for storing food data", "Search engine for querying the database", "User interface for browsing and filtering results"]
+            },
+            {
+                "idea_rank": 2,
+                "idea_name": "In-game Activity Duration Plug-in",
+                "idea_summary": "A plug-in for video games that tracks the duration of in-game activities and provides insights on how players spend their time. It can also offer suggestions for optimizing gameplay and improving time management.",
+                "information_story": "The plug-in integrates with popular game engines to display data from crowdsourcing on how long players spend on various activities within the game. This information can help players identify areas where they may be spending too much time and make informed decisions about how to optimize their gameplay experience.",
+                "possible_information_structures": ["Database for storing activity logs", "API for integrating with game engines", "User interface for viewing activity insights and suggestions"]
+            },
+            {
+                "idea_rank": 3,
+                "idea_name": "Online Food Label Database",
+                "idea_summary": "A database containing detailed information about food labels, including ingredients, nutritional facts, and allergen information. Users can search for specific products or browse categories to find comprehensive label data.",
+                "information_story": "The database compiles information from various regulatory bodies and food manufacturers to provide a centralized source of food label data. Users can search for specific products or filter by criteria such as dietary restrictions or nutritional content.",
+                "possible_information_structures": ["Database for storing food label data", "Search engine for querying the database", "User interface for browsing and filtering results"]
+            }
+        ]
+    }
+}

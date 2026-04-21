@@ -1,0 +1,28 @@
+{
+    "name": "Pete Namchaisiri",
+    "courseCode": "IMT 542",
+    "courseName": "Portable Information Structures",
+    "assignment": "I1 Easy to Understand: Find and describe 3 different information systems",
+    "submission": {
+        "informationSystems": [
+            {
+                "name": "King County Bus Routes",
+                "purpose": "To provide information about bus routes, schedules, and maps for public transportation in King County.",
+                "formats": ["HTML", "API Calls", "Website"],
+                "url": "https://kingcounty.gov/depts/transportation/metro/schedules-maps/bus-routes.aspx"
+            },
+            {
+                "name": "Weather Information by Government",
+                "purpose": "To provide weather forecasts, warnings, and climate information to the public.",
+                "formats": ["API Calls", "Website"],
+                "url": "https://www.weather.gov/"
+            },
+            {
+                "name": "Google Drive",
+                "purpose": "To provide a platform for storing, sharing, and collaborating on files and documents.",
+                "formats": ["Web Application", "Mobile Application"],
+                "url": "https://www.google.com/drive"
+            }
+        ]
+    }
+}

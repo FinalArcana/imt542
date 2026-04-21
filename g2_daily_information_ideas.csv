@@ -1,0 +1,4 @@
+idea number, idea summary, information source, insight enablement, msim specialization overlap areas
+1,Online database for nutritional values for food and supplement products,Collect from food labels,Enables nutritional and additives information on food products even when original container is not available, Data Science/Information Architecture
+2,A plugin for online games that display average duration of in-game tasks,Collect from game session data,Helps players manage their time and set expectations for game session length, Data Science/Game Development
+3,"Hyperlocal weather‑aware daily planning assistant","Collect from public weather APIs such as NOAA National Weather Service","Provides personalized recommendations for activities travel and safety based on short‑term weather conditions","Data Science/Business Intelligence/User Experience"

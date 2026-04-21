@@ -1,0 +1,43 @@
+{
+    "name": "Pete Namchaisiri",
+    "courseCode": "IMT 542",
+    "courseName": "Portable Information Structures",
+    "assignment": "I2 Easy to Integrate: Take one information structure from week 1 and integrate it",
+    "submission": {
+        "jsonDump": {
+            "search_term": "milk",
+            "sources": {
+              "nutrition": "Local USDA JSON dump: FoodData_Central_foundation_food_json_2025-12-18.json",
+              "prices": "Open Prices API (prices.openfoodfacts.org)"
+            },
+            "usda_match": {
+              "food_name": "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D",
+              "fdc_id": 746772,
+              "calories_100g": 43.0,
+              "protein_100g": 3.38,
+              "serving_g": 100.0
+            },
+            "price_summary_usd": {
+              "avg_price_per_item_usd": 5.24,
+              "median_price_per_item_usd": 5.24,
+              "n_price_points_usd": 1,
+              "n_products_considered": 14
+            },
+            "computed_metrics": {
+              "calories_per_item": 43.0,
+              "protein_g_per_item": 3.38,
+              "calories_per_usd": 8.21,
+              "protein_g_per_usd": 0.65
+            }
+        },
+        "challenges": [
+            "USDA food data is in generic terms and Open Food Price list their prices based on product names. It was very difficult to match the search term and combine the two.",
+            "Open Food Price doesn't have a lot of USD prices. Most of them are in EUR."
+        ],
+        "improvements": [
+          "Implement better search algorithms to make finding products and food item name more accurate.",
+          "Use caching technique so we don't have to perform new calculation every time"
+        ]
+    }
+}
+
