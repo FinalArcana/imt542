@@ -130,3 +130,29 @@ Thumbs.db
 
 # Custom ignores
 sandbox
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.env
+.env.local
+.env.*.local
+package-lock.json
+yarn.lock
+.pnp
+.pnp.js
+coverage/
+.nyc_output/
+*.tgz
+*.zip
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
