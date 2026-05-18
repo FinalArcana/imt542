@@ -13,7 +13,7 @@ The API is exposed publicly using **ngrok**, and accessed via Python `requests` 
 
 ---
 
-## **📹 Video Demonstration**
+## **Video Demonstration**
 A full walkthrough showing:
 
 - Flask server running  
@@ -23,6 +23,38 @@ A full walkthrough showing:
 
 **Video Link:**  
 [https://drive.google.com/file/d/1GTA_Pq0VcoCUe9OiH4TOWzvYwnMKjfdl/view?usp=sharing](https://drive.google.com/file/d/1GTA_Pq0VcoCUe9OiH4TOWzvYwnMKjfdl/view?usp=sharing)
+---
+
+## **Dataset (BLS Average Price Data)**
+
+The dataset used in this project comes from the **Bureau of Labor Statistics (BLS) Time Series Flat Files**, which provide complete historical datasets for many BLS programs.
+
+The specific dataset used here is:
+
+- **Average Price (AP) Dataset – Food Subset**  
+- File: `ap.data.3.Food`  
+- Contains monthly average retail prices for food items across U.S. regions
+
+You can explore the full dataset directory here:
+
+ **BLS Time Series Flat Files**  
+`https://download.bls.gov/pub/time.series/`
+
+The AP dataset folder is located at:
+
+ **Average Price (AP) Dataset**  
+`https://download.bls.gov/pub/time.series/ap/`
+
+This directory includes:
+
+- `ap.data.3.Food` — food price observations  
+- `ap.series` — series metadata  
+- `ap.item` — item lookup table  
+- `ap.area` — geographic area lookup table  
+- Documentation files describing the dataset structure  
+
+These files are publicly available and updated regularly by the U.S. Bureau of Labor Statistics.
+
 
 ---
 
