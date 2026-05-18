@@ -1,0 +1,12 @@
+The project incorporates USDA Foundation Foods and F MAP datasets that provide stable 
+identifiers such as FDC IDs and EFPG codes, supporting long term traceability and global reference (F1). 
+These identifiers are preserved throughout all merged tables, ensuring that metadata clearly links back 
+to the original data sources (F3, I3). Both datasets include rich, domain standard metadata 
+such as nutrient definitions, measurement units, and food category taxonomies, which the project retains 
+to maintain interpretability and meaningful reuse (F2, R1). Because the data are accessed through openly 
+available USDA JSON and CSV formats, they remain retrievable using standardized and universally 
+implementable protocols (A1, A1.1). The EFPG category system is a structured and publicly documented 
+USDA taxonomy that provides consistent terminology for food categories and supports interoperability, 
+even though it is not a community maintained vocabulary in the formal FAIR sense (I1, I2). 
+Clear citations and source documentation ensure transparent provenance and appropriate reuse conditions, 
+consistent with responsible data management practices (R1.2, R1.1).
