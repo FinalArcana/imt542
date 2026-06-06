@@ -31,21 +31,6 @@ A system that integrates USDA Foundation Foods nutrient data with BLS Average Re
 
 ---
 
-## Project Documents
-
-| Assignment | Description |
-|---|---|
-| [G2](g2_daily_information_ideas.csv) | Initial information ideas and MSIM specialization alignment |
-| [G3](g3.json) | Refined project ideation — Food Nutrition vs. Cost Database selected |
-| [G4](g4.pdf) | Wireframe, concepts, and proposed system structure |
-| [G5](g5.txt) | FAIR principles analysis of source datasets |
-| [G6](g6.md) | Availability, limitations, ethics, and societal impact |
-| [G7](g7.md) | Deficiency analysis and improved information structure design |
-| [G8](g8.md) | API documentation and access methodology |
-| [G9](g9.md) | Test plan, quality metrics, and monitoring strategy |
-
----
-
 ## Data Sources
 
 | Dataset | Source | Format | Access |
