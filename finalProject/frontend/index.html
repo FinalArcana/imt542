@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriCost — Food Value Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <div class="logo">Nutri<span>Cost</span></div>
+      <a class="nav-link" href="pair.html">↗ open pair view</a>
+    </header>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search foods — try &quot;chicken&quot;, &quot;tomato&quot;, &quot;eggs&quot;…"
+        autocomplete="off"
+        spellcheck="false"
+      >
+    </div>
+    <div class="search-status" id="search-status">Type to explore nutrition and price data</div>
+
+    <div id="results-container">
+      <div class="empty-state" id="empty-state">
+        No results yet — start typing above
+      </div>
+      <div class="results-list hidden" id="results-list"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

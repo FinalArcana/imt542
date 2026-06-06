@@ -1,7 +1,64 @@
-from flask import Flask, jsonify
+import sqlite3
+from pathlib import Path
+
+from flask import Flask, jsonify, request
 import pandas as pd
 
 app = Flask(__name__)
+
+BASE_DIR = Path(__file__).resolve().parent
+DB_PATH = BASE_DIR / "series_access.db"
+
+
+def init_db():
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS series_access_log (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                series_id TEXT NOT NULL,
+                accessed_at TEXT DEFAULT CURRENT_TIMESTAMP
+            )
+            """
+        )
+        conn.commit()
+
+
+def record_series_access(series_id):
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.execute(
+            "INSERT INTO series_access_log (series_id) VALUES (?)",
+            (series_id,),
+        )
+        conn.commit()
+
+
+def get_top_accessed_series(limit=5):
+    with sqlite3.connect(DB_PATH) as conn:
+        rows = conn.execute(
+            """
+            SELECT series_id, COUNT(*) AS access_count
+            FROM series_access_log
+            GROUP BY series_id
+            ORDER BY access_count DESC, series_id ASC
+            LIMIT ?
+            """,
+            (limit,),
+        ).fetchall()
+
+    item_name_lookup = series.set_index("series_id")["item_name"].to_dict()
+
+    return [
+        {
+            "series_id": series_id,
+            "access_count": access_count,
+            "item_name": item_name_lookup.get(series_id),
+        }
+        for series_id, access_count in rows
+    ]
+
+
+init_db()
 
 # Load BLS data into memory
 series = pd.read_csv("data/ap.series", sep="\t")
@@ -39,8 +96,9 @@ def get_series():
 
 @app.route("/data/<series_id>")
 def get_series_data(series_id):
-    # Normalize incoming ID
+    # Normalize incoming ID and record this lookup immediately
     series_id = series_id.upper().strip()
+    record_series_access(series_id)
 
     # Series metadata
     meta = series[series["series_id"] == series_id]
@@ -75,6 +133,11 @@ def home():
 @app.route("/api/health", methods=["GET"])
 def health():
     return jsonify({"status": "ok"})
+
+
+@app.route("/analytics/top-series", methods=["GET"])
+def top_series():
+    return jsonify({"top_series": get_top_accessed_series(5)})
 
 @app.route("/api/greet", methods=["GET"])
 def greet():

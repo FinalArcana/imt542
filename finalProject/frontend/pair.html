@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriCost — Pair View</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wide">
+
+    <header>
+      <div class="logo">Nutri<span>Cost</span></div>
+      <a class="nav-link" href="index.html">← back to search</a>
+    </header>
+
+    <!-- Loading state -->
+    <div id="pair-loading">
+      <div class="skeleton mt-2" style="width:60%;height:1.4rem"></div>
+      <div class="skeleton mt-1" style="width:40%;height:1rem"></div>
+      <div class="skeleton mt-2" style="height:160px"></div>
+    </div>
+
+    <!-- Error state -->
+    <div id="pair-error" class="hidden warn-banner"></div>
+
+    <!-- Main content -->
+    <div id="pair-content" class="hidden">
+
+      <div class="warn-banner" id="pair-warning"></div>
+
+      <!-- Two-panel pair view -->
+      <div class="pair-grid">
+
+        <!-- BLS panel (left) -->
+        <div class="panel panel-bls" id="panel-bls">
+          <div class="panel-header">
+            <span class="panel-source">BLS Price Series</span>
+            <button class="btn-swap" id="swap-bls-btn">swap ↕</button>
+          </div>
+          <div class="panel-body">
+            <div class="panel-name" id="bls-item-name">—</div>
+            <div class="panel-sub" id="bls-area">—</div>
+            <div class="price-amount" id="bls-price">—</div>
+            <div class="price-detail" id="bls-price-detail">—</div>
+            <!-- swap dropdown -->
+            <div class="swap-dropdown" id="swap-bls-list"></div>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="connector">
+          <div class="connector-line"></div>
+          <div class="connector-label">paired</div>
+          <div class="connector-line"></div>
+        </div>
+
+        <!-- USDA panel (right) -->
+        <div class="panel panel-usda" id="panel-usda">
+          <div class="panel-header">
+            <span class="panel-source">USDA Foundation Foods</span>
+            <button class="btn-swap" id="swap-usda-btn">swap ↕</button>
+          </div>
+          <div class="panel-body">
+            <div class="panel-name" id="usda-description">—</div>
+            <div class="panel-sub" id="usda-category">—</div>
+            <div class="faint mt-1">per 100 g</div>
+            <div class="nutrient-grid mt-1" id="nutrient-grid"></div>
+            <!-- swap dropdown -->
+            <div class="swap-dropdown" id="swap-usda-list"></div>
+          </div>
+        </div>
+
+      </div><!-- /pair-grid -->
+
+      <!-- Derived metrics -->
+      <div class="metrics-card" id="metrics-card">
+        <div class="metrics-title">Nutrition · Cost Metrics <span class="faint">/ per $1 USD</span></div>
+        <div class="metrics-grid" id="metrics-grid"></div>
+      </div>
+
+      <div class="faint" id="pair-meta"></div>
+
+    </div><!-- /pair-content -->
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
